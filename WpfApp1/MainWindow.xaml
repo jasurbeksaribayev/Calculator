@@ -1,0 +1,267 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Calculator"
+        Height="500" 
+        Width="347" 
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanMinimize">
+    <Border Background="Aquamarine" CornerRadius="15">
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83"/>
+            <ColumnDefinition Width="83"/>
+            <ColumnDefinition Width="83"/>
+            <ColumnDefinition Width="*"/>
+           
+        </Grid.ColumnDefinitions>
+
+        <TextBox
+            x:Name="OutputPlace"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            FontSize="45"
+            FontWeight="Bold"
+            FontStyle="Normal"
+            Foreground="Black"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="10"
+            Text="0"/>
+
+           
+        <Button
+            x:Name = "PercentBtn"
+            Grid.Row = "1"
+            Grid.Column = "0"
+            Click="PercentBtn_Click"
+            Content="%"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+            <Button
+            x:Name = "CEBtn"
+            Grid.Row = "1"
+            Grid.Column = "1"
+            Click="CEBtn_Click"
+            Content="CE"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "Ctn"
+            Grid.Row = "1"
+            Grid.Column = "2"
+            Click="Ctn_Click"
+            Content="C"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "ClearBtn"
+            Grid.Row = "1"
+            Grid.Column = "3"
+            Click="ClearBtn_Click"
+            Content="&#x003C;="
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "xBtn"
+            Grid.Row = "2"
+            Grid.Column = "0"
+            Click="xBtn_Click"
+            Content="1/x"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "XSquareBtn"
+            Grid.Row = "2"
+            Grid.Column = "1"
+            Click="XSquareBtn_Click"
+            Content="x^2"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "RootBtn"
+            Grid.Row = "2"
+            Grid.Column = "2"
+            Click="RootBtn_Click"
+            Content="x^1/2"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "DivisiorBtn"
+            Grid.Row = "2"
+            Grid.Column = "3"
+            Click="DivisiorBtn_Click"
+            Content="/"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "SevenBtn"
+            Grid.Row = "3"
+            Grid.Column = "0"
+            Click="SevenBtn_Click"
+            Content="7"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "EightBtn"
+            Grid.Row = "3"
+            Grid.Column = "1"
+            Click="EightBtn_Click"
+            Content="8"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "NineBtn"
+            Grid.Row = "3"
+            Grid.Column = "2"
+            Click="NineBtn_Click"
+            Content="9"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "MultiplierBtn"
+            Grid.Row = "3"
+            Grid.Column = "3"
+            Click="MultiplierBtn_Click"
+            Content="x"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "FourthBtn"
+            Grid.Row = "4"
+            Grid.Column = "0"
+            Click="FourthBtn_Click"
+            Content="4"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "FiveBtn"
+            Grid.Row = "4"
+            Grid.Column = "1"
+            Click="FiveBtn_Click"
+            Content="5"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "SixBtn"
+            Grid.Row = "4"
+            Grid.Column = "2"
+            Click="SixBtn_Click"
+            Content="6"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "minusBtn"
+            Grid.Row = "4"
+            Grid.Column = "3"
+            Click="minusBtn_Click"
+            Content="-"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+             />
+        <Button
+            x:Name = "OneBtn"
+            Grid.Row = "5"
+            Grid.Column = "0"
+            Click="OneBtn_Click"
+            Content="1"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "TwoBtn"
+            Grid.Row = "5"
+            Grid.Column = "1"
+            Click="TwoBtn_Click"
+            Content="2"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "ThreeBtn"
+            Grid.Row = "5"
+            Grid.Column = "2"
+            Click="ThreeBtn_Click"
+            Content="3"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "PlusBtn"
+            Grid.Row = "5"
+            Grid.Column = "3"
+            Click="PlusBtn_Click"
+            Content="+"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "PlusMinusBtn"
+            Grid.Row = "6"
+            Grid.Column = "0"
+            Click="PlusMinusBtn_Click"
+            Content="+/-"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "ZeroBtn"
+            Grid.Row = "6"
+            Grid.Column = "1"
+            Click="ZeroBtn_Click"
+            Content="0"
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "CommaBtn"
+            Grid.Row = "6"
+            Grid.Column = "2"
+            Click="CommaBtn_Click"
+            Content=","
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+        <Button
+            x:Name = "EqualBtn"
+            Grid.Row = "6"
+            Grid.Column = "3"
+            Click="EqualBtn_Click"
+            Content="="
+            FontSize="20"
+            FontWeight="Bold" HorizontalAlignment="Left" Width="92"
+            />
+    </Grid>
+    </Border>
+</Window>
